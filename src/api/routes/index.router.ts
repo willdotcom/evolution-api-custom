@@ -66,7 +66,7 @@ router
       version: packageJson.version,
       clientName: process.env.DATABASE_CONNECTION_CLIENT_NAME,
       manager: !serverConfig.DISABLE_MANAGER ? `${req.protocol}://${req.get('host')}/manager` : undefined,
-      documentation: `https://doc.evolution-api.com`,
+      //documentation: `https://doc.evolution-api.com`,
     });
   })
   .post('/verify-creds', authGuard['apikey'], async (req, res) => {
